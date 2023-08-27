@@ -29,19 +29,24 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *counter, *add, *temp;
+	listint_t *current_lead, *current_follow, *next_node;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	if (!list || !(*list) || !((*list)->next))
 		return;
 
-	for (counter = (*list)->next; counter != NULL; counter = temp)
+	current_follow = (*list);
+	current_lead = (*list)->next;
+	while (current_lead)
 	{
-		temp = counter->next;
-		add = counter->prev;
-		while (add != NULL && add->n < add->n)
+		next_node = current_lead->next;
+		while (current_follow && current_lead->n < current_follow->n)
 		{
-			swap_list(list, &add, counter);
-			print_list((const listint_t *)*list);
+			swap_nodes(list, &current_follow, current_lead);
+			print_list(*list);
+			current_follow = current_lead->prev;
 		}
+		current_lead = next_node;
+		if (current_lead)
+			current_follow = current_lead->prev;
 	}
 }
