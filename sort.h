@@ -38,6 +38,7 @@ void mergeSortRecursive(int *subarray, int *buffer, size_t l_band, size_t u_band
 int max_val(int *array, int size);
 void countingSort(int *array, size_t size, int s_digit, int *buffer);
 int hoare_partition(int *array, size_t size, int start, int end);
+void hoare_sort(int *array, size_t size, int start, int end);
 
 int l_partition(int *array, size_t size, int left, int right);
 void l_sort(int *array, size_t size, int left, int right);

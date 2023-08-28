@@ -39,7 +39,8 @@ size_t u_band)
  * @l_band: The lower bound index of subarray.
  * @u_band: The upper bound index of subarray.
  */
-void mergeSortRecursive(int *subarray, int *buffer, size_t l_band, size_t u_band)
+void mergeSortRecursive(int *subarray, int *buffer, size_t l_band,
+		size_t u_band)
 {
 	size_t middle;
 
