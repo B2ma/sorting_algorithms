@@ -4,10 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* direction macros for bitonic sort */
-#define UP 0
-#define DOWN 1
-
 /**
  * enum bool - Boolean values enumeration.
  * @false: 0.
@@ -18,7 +14,6 @@ typedef enum bool
 	false = 0,
 	true
 } bool;
-
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -34,9 +29,12 @@ typedef struct listint_s
 } listint_t;
 
 void swap_ints(int *a, int *b);
-void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2):
+void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+void swapNodesDll(listint_t **list, listint_t *near, listint_t *far);
+void subarrayMerge(int *subarray, int *buffer, size_t l_band, size_t middle, size_t u_band);
+void mergeSortRecursive(int *subarray, int *buffer, size_t l_band, size_t u_band);
 
 int l_partition(int *array, size_t size, int left, int right);
 void l_sort(int *array, size_t size, int left, int right);
@@ -44,7 +42,6 @@ void quick_sort(int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
-void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
