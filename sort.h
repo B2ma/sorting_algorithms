@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define UP 0
+#define DOWN 1
+
 /**
  * enum bool - Boolean values enumeration.
  * @false: 0.
@@ -33,8 +36,10 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void swapNodesDll(listint_t **list, listint_t *near, listint_t *far);
-void subarrayMerge(int *subarray, int *buffer, size_t l_band, size_t middle, size_t u_band);
-void mergeSortRecursive(int *subarray, int *buffer, size_t l_band, size_t u_band);
+void subarrayMerge(int *subarray, int *buffer, size_t l_band, size_t middle,
+		size_t u_band);
+void mergeSortRecursive(int *subarray, int *buffer, size_t l_band,
+		size_t u_band);
 int max_val(int *array, int size);
 void countingSort(int *array, size_t size, int s_digit, int *buffer);
 int hoare_partition(int *array, size_t size, int start, int end);
