@@ -1,10 +1,10 @@
 #include "sort.h"
 
 /**
- * swapNodesDll - swaps two adjacent nodes of a doubly linked list
- * @list: doubly linked list of integers to be sorted
- * @near: node closer to head, far->prev
- * @far: node closer to tail, near->next
+ * swapNodesDll - swaps two adjacent nodes ofdoubly linked list
+ * @list: doubly linked list
+ * @near: the  node closer to head
+ * @far: the node closer to tail
  */
 void swapNodesDll(listint_t **list, listint_t *near, listint_t *far)
 {
@@ -27,8 +27,8 @@ void swapNodesDll(listint_t **list, listint_t *near, listint_t *far)
 
 /**
  * cocktail_sort_list - sorts a doubly linked list of integers in ascending
- * order using an cocktail shaker sort algorithm
- * @list: doubly linked list of integers to be sorted
+ *	order using cocktail shaker sort algorithm
+ * @list: doubly linked list
  */
 void cocktail_sort_list(listint_t **list)
 {
