@@ -1,12 +1,31 @@
 #include "sort.h"
 
 /**
- * counting_sort - Sort an array of integers in ascending order
- * using the counting sort algorithm.
+* max_value - A function that gets the largest value in an array of integers.
+* @array: An array of integers.
+* @size: The size of the array.
+*
+* Return: The largest value integer in the array.
+*/
+int max_value(int *array, int size)
+{
+int largets_value, i;
+
+for (largets_value = array[0], i = 1; i < size; i++)
+{
+if (array[i] > largets_value)
+largets_value = array[i];
+}
+
+return (largets_value);
+}
+
+/**
+ * counting_sort - A function that sorts an array of integers
+ * in ascending order using the counting sort algorithm.
  * @array: An array of integers.
  * @size: The size of the array.
- *
- * Description: Prints the counting array after setting it up.
+ * Description: Prints the array after sorting.
  */
 void counting_sort(int *array, size_t size)
 {
