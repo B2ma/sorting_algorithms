@@ -1,9 +1,22 @@
 #include "sort.h"
 
+/**
+* swap_ints - A function that swap two integers in an array.
+* @a: The first integer to swap.
+* @b: The second integer to swap.
+*/
+void swap_ints(int *a, int *b)
+{
+int temp;
+
+temp = *a;
+*a = *b;
+*b = temp;
+}
 
 /**
  * selection_sort - Sorts an array of integers in ascending order
- *                  using the selection sort algorithm.
+ * using the selection sort algorithm.
  * @array: An array of integers.
  * @size: The size of the array.
  */
