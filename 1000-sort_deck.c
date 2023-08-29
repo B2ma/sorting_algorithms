@@ -99,7 +99,7 @@ void insertion_sort_sortValue(deck_node_t **deck)
 {
 	deck_node_t *current_lead, *current_follow, *tmp;
 
-	for (current_lead = (*deck)->next; current_lead != NULL; 
+	for (current_lead = (*deck)->next; current_lead != NULL;
 	current_lead = tmp)
 	{
 		tmp = current_lead->next;
