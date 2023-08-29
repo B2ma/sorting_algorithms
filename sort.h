@@ -31,20 +31,6 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-/**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
- */
-void swap_ints(int *a, int *b)
-{
-        int temp;
-
-        temp = *a;
-        *a = *b;
-        *b = temp;
-}
-
 void swap_ints(int *a, int *b);
 void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2);
 void print_array(const int *array, size_t size);
@@ -54,7 +40,7 @@ void subarrayMerge(int *subarray, int *buffer, size_t l_band, size_t middle,
 		size_t u_band);
 void mergeSortRecursive(int *subarray, int *buffer, size_t l_band,
 		size_t u_band);
-int max_val(int *array, int size);
+int max_value(int *array, int size);
 void countingSort(int *array, size_t size, int s_digit, int *buffer);
 int hoare_partition(int *array, size_t size, int start, int end);
 void hoare_sort(int *array, size_t size, int start, int end);
