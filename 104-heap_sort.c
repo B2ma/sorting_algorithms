@@ -1,20 +1,5 @@
 #include "sort.h"
 
-
-/**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
- */
-void swap_ints(int *a, int *b)
-{
-	int temp;
-
-	temp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
 /**
  * sift_down - Turn a binary tree into a complete binary heap.
  * @array: An array of integers representing a binary tree.
@@ -27,11 +12,11 @@ void sift_down(int *array, size_t size, size_t b_index, size_t root_node)
 	size_t left_node, right_node, large;
 
 	left_node = 2 * root_node + 1;
-	righ_nodet = 2 * root_node + 2;
+	right_node = 2 * root_node + 2;
 	large = root_node;
 
 	if (left_node < b_index && array[left_node] > array[large])
-		large = left_nnode;
+		large = left_node;
 	if (right_node < b_index && array[right_node] > array[large])
 		large = right_node;
 

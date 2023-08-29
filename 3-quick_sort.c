@@ -1,18 +1,5 @@
 #include "sort.h"
 
-/**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer
- * @b: The second integer
- */
-void swap_ints(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
 
 /**
  * l_partition - Order a subset of an array of integers based on

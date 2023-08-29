@@ -68,9 +68,9 @@ void insertion_sort_deckSort(deck_node_t **deck)
 {
 	deck_node_t *current_lead, *current_follow, *temp;
 
-	for (current_lead = (*deck)->next; current_lead != NULL; current_lead = tmp)
+	for (current_lead = (*deck)->next; current_lead != NULL; current_lead = temp)
 	{
-		tmp = current_lead->next;
+		temp = current_lead->next;
 		current_follow = current_lead->prev;
 		while (current_follow != NULL && current_follow->card->kind >
 			current_lead->card->kind)
@@ -97,12 +97,12 @@ void insertion_sort_deckSort(deck_node_t **deck)
  */
 void insertion_sort_sortValue(deck_node_t **deck)
 {
-	deck_node_t *current_lead, *current_follow, *tmp;
+	deck_node_t *current_lead, *current_follow, *temp;
 
 	for (current_lead = (*deck)->next; current_lead != NULL;
-	current_lead = tmp)
+	current_lead = temp)
 	{
-		tmp = current_lead->next;
+		temp = current_lead->next;
 		current_follow = current_lead->prev;
 		while (current_follow != NULL &&
 		       current_follow->card->kind == current_lead->card->kind &&
