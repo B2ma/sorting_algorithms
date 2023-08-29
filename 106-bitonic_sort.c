@@ -1,11 +1,25 @@
 #include "sort.h"
 
+/**
+* swap_ints - A function that swap two integers in an array.
+* @a: The first integer to swap.
+* @b: The second integer to swap.
+*/
+void swap_ints(int *a, int *b)
+{
+int temp;
+
+temp = *a;
+*a = *b;
+*b = temp;
+}
 
 /**
- * bit_merge - Sort a bitonic sequence inside an array of integers.
- * @array: An array of integers.
+ * bit_merge - A function that sort a bitonic sequence
+ * inside an array of integers.
+ * @array: Array of integers to sort
  * @size: The size of the array.
- * @start: The starting index of the sequence in array to sort.
+ * @start: The index to start sorting from in a sequence in array.
  * @seq: The size of the sequence to sort.
  * @flow: The direction to sort in.
  */
@@ -29,11 +43,11 @@ void bit_merge(int *array, size_t size, size_t start, size_t seq,
 
 /**
  * bit_seq - Convert an array of integers into a bitonic sequence.
- * @array: An array of integers.
+ * @array: Array of integers to convert.
  * @size: The size of the array.
- * @start: The starting index of a block of the building bitonic sequence.
+ * @start: The index to start sorting from in a bitonic sequence.
  * @seq: The size of a block of the building bit sequence.
- * @flow: The direction to sort the bit sequence block in.
+ * @flow: The direction to sort in.
  */
 void bit_seq(int *array, size_t size, size_t start, size_t seq, char flow)
 {
@@ -55,12 +69,12 @@ void bit_seq(int *array, size_t size, size_t start, size_t seq, char flow)
 }
 
 /**
- * bitonic_sort - Sort an array of integers in ascending
+ * bitonic_sort - A function that sort an array of integers in ascending
  * order using the bitonic sort algorithm.
- * @array: An array of integers.
+ * @array: Array of integers to sort.
  * @size: The size of the array.
  *
- * Description: Prints the array after each swap. Only works for
+ * Description: Prints the array after each swap. Works for
  * size = 2^k where k >= 0 (ie. size equal to powers of 2).
  */
 void bitonic_sort(int *array, size_t size)
